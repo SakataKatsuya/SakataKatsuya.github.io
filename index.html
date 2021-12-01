@@ -13,18 +13,29 @@ bbbbbbbbbbbbbbbb
 window.onload = function(){
 	divMsg.insertAdjacentHTML("beforeend", `<div class="alert alert-success">    <strong>Hi there!</strong> You've read an important message.  </div>`);
 	
-    let div;
+    if(true) {
+	    let div;
+	    div = document.createElement("div");
+	    div.style.backgroundColor = "#ffeeff"
+	    div.style.marginTop = "2px"
+	    div.insertAdjacentHTML("afterbegin", "zzz...");
+		document.body.appendChild(div);
+	    div = document.createElement("div");
+	    div.style.backgroundColor = "#ffeeff"
+	    div.style.marginTop = "2px"
+	    div.insertAdjacentHTML("afterbegin", "zzz..." + Date.now());
+		document.body.appendChild(div);
+	    div = document.createElement("div");
+	    div.style.backgroundColor = "#ffeeff"
+	    div.style.marginTop = "2px"
+	    div.insertAdjacentHTML("afterbegin", "zzz..." + new Date(Date.now()));
+		document.body.appendChild(div);
+    }
+    /* Scope??? */
     div = document.createElement("div");
     div.style.backgroundColor = "#ffeeff"
-    div.insertAdjacentHTML("afterbegin", "zzz...");
-	document.body.appendChild(div);
-    div = document.createElement("div");
-    div.style.backgroundColor = "#ffeeff"
-    div.insertAdjacentHTML("afterbegin", "zzz..." + Date.now());
-	document.body.appendChild(div);
-    div = document.createElement("div");
-    div.style.backgroundColor = "#ffeeff"
-    div.insertAdjacentHTML("afterbegin", "zzz..." + new Date(Date.now()));
+    div.style.marginTop = "2px"
+    div.insertAdjacentHTML("afterbegin", "aaa...");
 	document.body.appendChild(div);
 }
 </script>
